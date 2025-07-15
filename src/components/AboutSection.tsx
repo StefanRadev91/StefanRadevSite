@@ -7,8 +7,31 @@ import {
   IconCertificate,
   IconTrendingUp
 } from '@tabler/icons-react'
+import { useEffect, useRef, useState } from 'react'
 
 export function AboutSection() {
+  const [isVisible, setIsVisible] = useState(false)
+  const sectionRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
   const skills = [
     { name: 'Python', stars: 4 },
     { name: 'Playwright', stars: 5 },
@@ -65,7 +88,19 @@ export function AboutSection() {
   ]
 
   return (
-    <Container size="xl" py="xl" id="about" style={{ maxWidth: '1400px', margin: '0 auto' }}>
+    <Container 
+      ref={sectionRef}
+      size="xl" 
+      py="xl" 
+      id="about" 
+      style={{ 
+        maxWidth: '1400px', 
+        margin: '0 auto',
+        transform: isVisible ? 'translateY(0)' : 'translateY(50px)',
+        opacity: isVisible ? 1 : 0,
+        transition: 'all 0.8s ease-out'
+      }}
+    >
       <Stack gap="xl">
         <div style={{ textAlign: 'center' }}>
           <Title order={2} size="2.5rem" mb="md">
@@ -119,6 +154,7 @@ export function AboutSection() {
             </Card>
           </Grid.Col>
         </Grid>
+
 
         <Card shadow="sm" padding="xl" radius="md" withBorder>
           <Group mb="lg">
