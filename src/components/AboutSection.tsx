@@ -1,4 +1,4 @@
-import { Container, Title, Text, Grid, Card, ThemeIcon, Progress, Stack, List, Badge, Group } from '@mantine/core'
+import { Container, Title, Text, Grid, Card, ThemeIcon, Stack, List, Badge, Group } from '@mantine/core'
 import { 
   IconRobot, 
   IconCode, 
