@@ -1,4 +1,4 @@
-import { Container, Text, Group, Stack, Divider, ActionIcon, useMantineColorScheme, Box, rem } from '@mantine/core'
+import { Container, Text, Group, Stack, Divider, ActionIcon, useMantineColorScheme, Box } from '@mantine/core'
 import { IconBrandLinkedin, IconBrandGithub, IconMail, IconPhone } from '@tabler/icons-react'
 
 export function Footer() {
