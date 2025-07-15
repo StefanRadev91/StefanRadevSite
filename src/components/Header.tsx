@@ -1,4 +1,4 @@
-import { Group, Button, Text, Container, ActionIcon, useMantineColorScheme, Paper } from '@mantine/core'
+import { Group, Button, Container, ActionIcon, useMantineColorScheme, Paper } from '@mantine/core'
 import { IconSun, IconMoon } from '@tabler/icons-react'
 
 export function Header() {

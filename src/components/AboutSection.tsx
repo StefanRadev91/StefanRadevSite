@@ -5,9 +5,7 @@ import {
   IconBrain, 
   IconTarget, 
   IconCertificate,
-  IconTrendingUp,
-  IconUsers,
-  IconTools
+  IconTrendingUp
 } from '@tabler/icons-react'
 
 export function AboutSection() {

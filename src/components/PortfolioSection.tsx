@@ -6,19 +6,12 @@ import {
   Grid, 
   Badge, 
   Group, 
-  Button, 
   Stack,
   Image,
   ThemeIcon,
   List
 } from '@mantine/core'
 import { 
-  IconExternalLink, 
-  IconBrandGithub, 
-  IconCalendar, 
-  IconUsers, 
-  IconTestPipe,
-  IconBrandAzure,
   IconCheck
 } from '@tabler/icons-react'
 import dacaImage from '../assets/DACA.png'
